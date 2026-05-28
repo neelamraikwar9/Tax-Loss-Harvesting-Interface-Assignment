@@ -1,0 +1,184 @@
+.holdingsBox {
+    background: #111827;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.holdingsHeader {
+    padding: 20px 24px 14px;
+}
+
+.holdingsHeader h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #f1f5f9;
+    margin: 0;
+}
+
+.tableWrap {
+    overflow-x: auto;
+}
+
+.holdingsTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.tableHeadRow {
+    border-top: 1px solid #1e293b;
+    border-bottom: 1px solid #1e293b;
+}
+
+.holdingsTable th {
+    padding: 10px 12px;
+    color: #64748b;
+    font-weight: 500;
+    white-space: nowrap;
+    text-align: right;
+}
+
+.checkCol {
+    width: 44px;
+    text-align: center !important;
+    padding-left: 24px !important;
+}
+
+.assetCol {
+    text-align: left !important;
+}
+
+.holdingsCol span {
+    font-size: 10px;
+    color: #475569;
+    font-weight: 400;
+}
+
+.tableRow {
+    border-bottom: 1px solid #1e293b;
+    cursor: pointer;
+    background: transparent;
+}
+
+.rowSelected {
+    border-bottom: 1px solid #1e293b;
+    cursor: pointer;
+    background: rgba(37, 99, 235, 0.1);
+}
+
+.holdingsTable td {
+    padding: 13px 12px;
+    vertical-align: middle;
+}
+
+.assetCell {
+    text-align: left;
+}
+
+.assetWrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.coinFallback {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #334155;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: #94a3b8;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.coinLogo {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.coinName {
+    font-weight: 600;
+    color: #e2e8f0;
+    font-size: 13px;
+}
+
+.coinSymbol {
+    color: #64748b;
+    font-size: 11px;
+    margin-top: 2px;
+}
+
+.holdingsCell {
+    text-align: right;
+}
+
+.holdingMain {
+    color: #e2e8f0;
+}
+
+.holdingSub {
+    color: #64748b;
+    font-size: 11px;
+}
+
+.valueCell {
+    text-align: right;
+    color: #e2e8f0;
+}
+
+.gainCell {
+    text-align: right;
+}
+
+.profitText {
+    font-weight: 600;
+    color: #4ade80;
+}
+
+.lossText {
+    font-weight: 600;
+    color: #f87171;
+}
+
+.gainSub {
+    color: #64748b;
+    font-size: 11px;
+}
+
+.dashText {
+    color: #475569;
+}
+
+.sellCell {
+    text-align: right;
+}
+
+.sellNormal {
+    color: #94a3b8;
+}
+
+.sellSelected {
+    color: #60a5fa;
+}
+
+.viewMoreWrap {
+    padding: 14px 24px;
+    border-top: 1px solid #1e293b;
+}
+
+.viewMoreBtn {
+    background: none;
+    border: none;
+    color: #3b82f6;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0;
+}

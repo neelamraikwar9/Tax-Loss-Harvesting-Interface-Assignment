@@ -2,17 +2,31 @@ import "./primePage.css";
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import { fetchHoldings, fetchCapitalGains } from "../mockAPIs/mockApi";
+import HoldingsTable from "./HoldingTable";
 
 const PrimePage = () => {
   const [disclaimerOpen, setDisclaimerOpen] = useState(true);
   const [capitalGains, setCapitalGains] = useState(null);
+  const [holdings, setHoldings] = useState([]);
   const [selected, setSelected] = useState(new Set());
+  const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
-    fetchCapitalGains().then((data) => {
-      setCapitalGains(data.capitalGains);
+    Promise.all([fetchHoldings(), fetchCapitalGains()]).then(([h, cg]) => {
+      setHoldings(h);
+      setCapitalGains(cg.capitalGains);
     });
   }, []);
+
+  const toggleAll = (checked) => {
+    setSelected(checked ? new Set(holdings.map((_, i) => i)) : new Set());
+  };
+
+  const toggleOne = (i) => {
+    const next = new Set(selected);
+    next.has(i) ? next.delete(i) : next.add(i);
+    setSelected(next);
+  };
 
   const afterGains = capitalGains
     ? {
@@ -101,7 +115,6 @@ const PrimePage = () => {
 
       {capitalGains && afterGains && (
         <div className="harvestingCont">
-          {/* Pre Harvesting */}
           <div className="preHarvCon">
             <h3 className="preHarvTxt">Pre Harvesting</h3>
             <table className="preHarvTable">
@@ -148,7 +161,6 @@ const PrimePage = () => {
             </div>
           </div>
 
-          {/* After Harvesting */}
           <div className="afterHarvCon">
             <h3 className="afterHarvTxt">After Harvesting</h3>
             <table className="afterHarvTable">
@@ -201,6 +213,15 @@ const PrimePage = () => {
           </div>
         </div>
       )}
+
+      <HoldingsTable
+        holdings={holdings}
+        selected={selected}
+        toggleOne={toggleOne}
+        toggleAll={toggleAll}
+        showAll={showAll}
+        setShowAll={setShowAll}
+      />
     </div>
   );
 };
