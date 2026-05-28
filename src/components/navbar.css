@@ -1,0 +1,43 @@
+.navContainer {
+    background: #111827;
+    border-bottom: 1px solid #1e293b;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    padding: 0 32px;
+}
+
+.spanContainer {
+    display: flex;
+    align-items: baseline;
+    gap: 1;
+}
+
+.span1 {
+    font-size: 20;
+    font-weight: 800;
+    color: #3131ff;
+    letter-spacing: -0.5;
+}
+
+.span2 {
+    font-size: 20;
+    font-weight: 800;
+    color: #f97316;
+    padding: 2px; 
+    
+}
+
+.sup {
+    font-size: 9;
+    color: #dbd4cf;
+    margin-left: 1px;
+    /* margin-bottom: 1rem; */
+    /* border: 1px solid yellow; */
+}
+
+@media (max-width: 768px) {
+    .navContainer {
+        padding: 0 16px !important;
+    }
+}

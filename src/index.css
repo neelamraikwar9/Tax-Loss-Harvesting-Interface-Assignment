@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+ 
+}
+
+
+#root {
+  /* border: 1px solid rgb(42, 39, 39); */
+  background-color: #242424;
+  min-height: 100vh;
+  color: whitesmoke; 
+  /* max-width: 100vh; */
+
+}
+
